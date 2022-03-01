@@ -1,0 +1,14 @@
+{
+  "name": "task-record-playback",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "source": "./index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "^2.3.2"
+  }
+}
