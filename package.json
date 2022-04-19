@@ -24,8 +24,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15",
-    "parcel": "^2.3.2",
-    "rimraf": "^3.0.2"
+    "parcel": "^2.3.2"
   },
   "dependencies": {
     "express": "^4.17.3",
