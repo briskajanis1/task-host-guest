@@ -1,14 +1,34 @@
 {
   "name": "task-record-playback",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
-  "source": "./index.html",
+  "targets": {
+    "client": {
+      "source": "./src/client/index.html",
+      "engines": {
+        "browsers": "defaults"
+      }
+    },
+    "server": {
+      "source": "./src/server.js",
+      "distDir": "./dist",
+      "engines": {
+        "node": "> 16"
+      }
+    }
+  },
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build"
+    "watch": "NODE_ENV=development nodemon --watch ./src",
+    "build": "NODE_ENV=development parcel build --no-optimize",
+    "start": "yarn build && node ./dist/server.js"
   },
   "devDependencies": {
+    "nodemon": "^2.0.15",
     "parcel": "^2.3.2"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-ws": "^5.0.2",
+    "rxjs": "^7.5.5"
   }
 }
