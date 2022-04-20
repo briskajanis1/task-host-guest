@@ -3,7 +3,7 @@ const GUEST_ROOM_CHANGE_DELAY_AFTER_HOST_ROOM_CHANGE = 2000;
 
 import express from "express";
 import expressWs from "express-ws";
-import { timer, Subject, takeUntil, concatWith, map, timeInterval, buffer, interval } from "rxjs";
+import { timer, Subject, concatWith, map, timeInterval, buffer, interval } from "rxjs";
 
 const app = express();
 const port = 8480;
